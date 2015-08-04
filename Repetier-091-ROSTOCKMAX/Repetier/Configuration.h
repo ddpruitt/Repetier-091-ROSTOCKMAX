@@ -604,9 +604,9 @@ on this endstop.
 
 // Set the values true where you have a hardware endstop. The Pin number is taken from pins.h.
 
-#define MIN_HARDWARE_ENDSTOP_X false
-#define MIN_HARDWARE_ENDSTOP_Y false
-#define MIN_HARDWARE_ENDSTOP_Z false
+#define MIN_HARDWARE_ENDSTOP_X true
+#define MIN_HARDWARE_ENDSTOP_Y true
+#define MIN_HARDWARE_ENDSTOP_Z true
 #define MAX_HARDWARE_ENDSTOP_X true
 #define MAX_HARDWARE_ENDSTOP_Y true
 #define MAX_HARDWARE_ENDSTOP_Z true
@@ -1073,7 +1073,7 @@ is always running and is not hung up for some unknown reason. */
 /* Z-Probing */
 
 #define FEATURE_Z_PROBE true
-#define Z_PROBE_PIN 63
+#define Z_PROBE_PIN 17
 #define Z_PROBE_PULLUP true
 #define Z_PROBE_ON_HIGH false
 #define Z_PROBE_X_OFFSET 0
@@ -1094,7 +1094,7 @@ is always running and is not hung up for some unknown reason. */
    This feature requires a working z-probe and you should have z-endstop at the top not at the bottom.
    The same 3 points are used for the G29 command.
 */
-#define FEATURE_AUTOLEVEL false
+#define FEATURE_AUTOLEVEL true
 #define Z_PROBE_X1 100
 #define Z_PROBE_Y1 20
 #define Z_PROBE_X2 160
