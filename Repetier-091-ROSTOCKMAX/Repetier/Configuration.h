@@ -1075,17 +1075,17 @@ is always running and is not hung up for some unknown reason. */
 #define FEATURE_Z_PROBE true
 #define Z_PROBE_PIN 63
 #define Z_PROBE_PULLUP true
-#define Z_PROBE_ON_HIGH true
+#define Z_PROBE_ON_HIGH false
 #define Z_PROBE_X_OFFSET 0
 #define Z_PROBE_Y_OFFSET 0
 // Waits for a signal to start. Valid signals are probe hit and ok button.
 // This is needful if you have the probe trigger by hand.
-#define Z_PROBE_WAIT_BEFORE_TEST true
+#define Z_PROBE_WAIT_BEFORE_TEST false
 /** Speed of z-axis in mm/s when probing */
 #define Z_PROBE_SPEED 2
 #define Z_PROBE_XY_SPEED 150
 /** The height is the difference between activated probe position and nozzle height. */
-#define Z_PROBE_HEIGHT 39.91
+#define Z_PROBE_HEIGHT 0.4
 /** These scripts are run before resp. after the z-probe is done. Add here code to activate/deactivate probe if needed. */
 #define Z_PROBE_START_SCRIPT ""
 #define Z_PROBE_FINISHED_SCRIPT ""
@@ -1094,7 +1094,7 @@ is always running and is not hung up for some unknown reason. */
    This feature requires a working z-probe and you should have z-endstop at the top not at the bottom.
    The same 3 points are used for the G29 command.
 */
-#define FEATURE_AUTOLEVEL true
+#define FEATURE_AUTOLEVEL false
 #define Z_PROBE_X1 100
 #define Z_PROBE_Y1 20
 #define Z_PROBE_X2 160
