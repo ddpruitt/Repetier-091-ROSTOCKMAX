@@ -681,7 +681,7 @@ on this endstop.
 // If EEPROM is enabled these values will be overidden with the values in the EEPROM
 #define X_MAX_LENGTH 250
 #define Y_MAX_LENGTH 250
-#define Z_MAX_LENGTH 234.66
+#define Z_MAX_LENGTH 377
 
 // Coordinates for the minimum axis. Can also be negative if you want to have the bed start at 0 and the printer can go to the left side
 // of the bed. Maximum coordinate is given by adding the above X_MAX_LENGTH values.
@@ -698,7 +698,8 @@ on this endstop.
 
 // Motor Current setting (Only functional when motor driver current ref pins are connected to a digital trimpot on supported boards)
 #if MOTHERBOARD==301
-#define MOTOR_CURRENT {155,155,155,165,0}   // Values 0-255 (RAMBO 135 = ~0.75A, 185 = ~1A)  use 140 for xyz and 160 for the E if using Kysan motors and 175 xyz and 200 if using wantai motors
+//#define MOTOR_CURRENT {155,155,155,165,0}   // Values 0-255 (RAMBO 135 = ~0.75A, 185 = ~1A)  use 140 for xyz and 160 for the E if using Kysan motors and 175 xyz and 200 if using wantai motors
+#define MOTOR_CURRENT {140,140,140,165,0}   // Values 0-255 (RAMBO 135 = ~0.75A, 185 = ~1A)  use 140 for xyz and 160 for the E if using Kysan motors and 175 xyz and 200 if using wantai motors
 #elif MOTHERBOARD==12
 #define MOTOR_CURRENT {35713,35713,35713,35713,35713} // Values 0-65535 (3D Master 35713 = ~1A)
 #endif
@@ -712,7 +713,8 @@ on this endstop.
 #if DRIVE_SYSTEM==3
 /** \brief Delta rod length
 */
-#define DELTA_DIAGONAL_ROD 269.0 // mm
+//#define DELTA_DIAGONAL_ROD 269.0 // mm
+#define DELTA_DIAGONAL_ROD 325.0  // mm, TrickLaser 
 
 
 /*  =========== Parameter essential for delta calibration ===================
@@ -1085,7 +1087,7 @@ is always running and is not hung up for some unknown reason. */
 #define Z_PROBE_SPEED 2
 #define Z_PROBE_XY_SPEED 150
 /** The height is the difference between activated probe position and nozzle height. */
-#define Z_PROBE_HEIGHT 0.4
+#define Z_PROBE_HEIGHT 0.0
 /** These scripts are run before resp. after the z-probe is done. Add here code to activate/deactivate probe if needed. */
 #define Z_PROBE_START_SCRIPT ""
 #define Z_PROBE_FINISHED_SCRIPT ""
@@ -1094,7 +1096,7 @@ is always running and is not hung up for some unknown reason. */
    This feature requires a working z-probe and you should have z-endstop at the top not at the bottom.
    The same 3 points are used for the G29 command.
 */
-#define FEATURE_AUTOLEVEL true
+#define FEATURE_AUTOLEVEL false
 #define Z_PROBE_X1 100
 #define Z_PROBE_Y1 20
 #define Z_PROBE_X2 160
@@ -1169,7 +1171,7 @@ Select the language to use.
 #define UI_LANGUAGE 13
 
 // This is line 2 of the status display at startup. Change to your like.
-#define UI_PRINTER_NAME "ROSTOCK MAX"
+#define UI_PRINTER_NAME "ROSTOCK MAX v2 - Bertha"
 #define UI_PRINTER_COMPANY "SeeMeCNC"
 
 
@@ -1232,7 +1234,7 @@ Values must be in range 1..255
 #define UI_SET_PRESET_HEATED_BED_TEMP_PLA 60
 #define UI_SET_PRESET_EXTRUDER_TEMP_PLA   180
 #define UI_SET_PRESET_HEATED_BED_TEMP_ABS 90  
-#define UI_SET_PRESET_EXTRUDER_TEMP_ABS   200
+#define UI_SET_PRESET_EXTRUDER_TEMP_ABS   225
 // Extreme values
 #define UI_SET_MIN_HEATED_BED_TEMP  40
 #define UI_SET_MAX_HEATED_BED_TEMP 120
